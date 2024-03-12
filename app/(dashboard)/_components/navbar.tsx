@@ -7,6 +7,8 @@ import {
 } from "@clerk/nextjs"
 import { SearchInput } from "./search-input"
 import { InviteButton } from "./invite-button"
+import { NotificationSection } from "./notification-section"
+import { Help } from "./help-section"
 
 export const Navbar = () => {
 
@@ -44,6 +46,12 @@ export const Navbar = () => {
             {organization && (
                 <InviteButton />
             )}
+
+            <Help />
+            {/*TODO: Help Menu Create */}
+            <NotificationSection />
+            {/*TODO: Notofication Menu Create */}
+
             <div>
                 <UserButton />
             </div>

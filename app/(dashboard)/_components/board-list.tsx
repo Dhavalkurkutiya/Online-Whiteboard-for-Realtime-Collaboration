@@ -9,6 +9,7 @@ import { EmptyFavorites } from "./empty-favorites";
 import { EmptySearch } from "./empty-search";
 import { BoardCard } from "./board-card";
 import { NewBoardButton } from "./new-board-button";
+import { MenuIcon } from "lucide-react";
 
 
 interface BoardListProps {
@@ -41,7 +42,6 @@ export const BoardList = ({
                <BoardCard.Skeleton />
                <BoardCard.Skeleton />
                <BoardCard.Skeleton />
-
                 </div>
             </div>
         )
@@ -66,7 +66,7 @@ export const BoardList = ({
                 {query.favorites ? "Favorite boards" : "Team Boards"}
             </h2>
             <div className="grid grid-cols-1 sm:grid-colos-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5 mt-8 pb-10">
-
+               
                 <NewBoardButton orgId={orgId} />
 
                 {data.map((board) => (
